@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdn.bootcss.com/require.js/2.3.6/require.js"></script>
+    <script>
+        require(["./../communicate"], function (com) {
+            com.ExcuteEvent("TS", "test", { id: "123" });
+            com.RegistEvent("TS",function(send,ev){
+                console.log(send);
+                console.log(ev);
+            })
+        })
+    </script>
+</head>
+
+<body></body>
+
+</html>
